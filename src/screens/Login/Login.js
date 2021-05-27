@@ -89,7 +89,7 @@ const Login = () => {
                         </TextInputContainer>
                         <TextInputContainer>
                             <TextInputLabel>Password</TextInputLabel>
-                            <TextInput placeholder="Password" onChange={evt => setPassword(evt.target.value)} />
+                            <TextInput placeholder="Password" type="password" onChange={evt => setPassword(evt.target.value)} />
                         </TextInputContainer>
                         <ButtonWithLoader text="Signin" isLoading={authState.isLoading} onClick={onLogin} />
                     </FormContainer>
@@ -114,11 +114,11 @@ const Login = () => {
                         </TextInputContainer>
                         <TextInputContainer>
                             <TextInputLabel>Password</TextInputLabel>
-                            <TextInput placeholder="Password" onChange={evt => setPassword(evt.target.value)} />
+                            <TextInput placeholder="Password" type="password" onChange={evt => setPassword(evt.target.value)} />
                         </TextInputContainer>
                         <TextInputContainer>
                             <TextInputLabel>Confirm Password</TextInputLabel>
-                            <TextInput placeholder="Confirm Password" onChange={evt => setConfirmPassword(evt.target.value)}  />
+                            <TextInput placeholder="Confirm Password" type="password" onChange={evt => setConfirmPassword(evt.target.value)}  />
                         </TextInputContainer>
                         <ButtonWithLoader text="Register" isLoading={authState.isLoading} onClick={onSignup} />
                     </FormContainer>

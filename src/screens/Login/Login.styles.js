@@ -75,7 +75,7 @@ export const TextInputLabel = styled.p`
     margin: 5px 0px;
 `;
 
-export const TextInput = styled.input.attrs({type: "text"})`
+export const TextInput = styled.input.attrs(props => ({type: props.type||"text"}))`
     border: none;
     outline: none;
     width: 90%;
