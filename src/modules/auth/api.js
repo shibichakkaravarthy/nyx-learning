@@ -9,5 +9,5 @@ export const signup = (emailId, password, role) => {
 }
 
 export const refreshToken = (token) => {
-    return axios.post("https://nyx-learning-backend.herokuapp.com//auth/refresh", {}, {headers: {"Authorization": token}});
+    return axios.post("https://nyx-learning-backend.herokuapp.com/auth/refresh", {}, {headers: {"Authorization": token}});
 }

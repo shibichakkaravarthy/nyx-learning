@@ -73,6 +73,7 @@ function* createCourseSaga(action) {
         const authState = yield select((state) => state.authReducer)
         const response = yield call(createCourse, {...action.payload, faculty: authState.accountId}, authState.accessToken.token)
         yield put(createCourseAsyncActions.success(response.data.result))
+		yield* getCreatedCoursesSaga()
         toast.success('New course Created', {
 			position: "top-right",
 			autoClose: 5000,
@@ -101,6 +102,7 @@ function* enrollSaga(action) {
         const authState = yield select((state) => state.authReducer)
         const response = yield call(enroll, action.payload, authState.accessToken.token)
         yield put(enrollAsyncActions.success(response.data.result))
+		yield* getEnrolledCoursesSaga()
         toast.success('Congratulations! You have enrolled in a new course', {
 			position: "top-right",
 			autoClose: 5000,
